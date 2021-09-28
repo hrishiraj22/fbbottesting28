@@ -3,6 +3,8 @@ const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 console.log(MY_VERIFY_TOKEN)
 
 let getWebhook = (req, res) => {
+  console.log("hello")
+  
 
     // Your verify token. Should be a random string.
     let VERIFY_TOKEN = MY_VERIFY_TOKEN;
@@ -51,8 +53,6 @@ let postWebhook = (req, res) => {
       // Get the sender PSID
       let sender_psid = webhook_event.sender.id;
       console.log('Sender PSID: ' + sender_psid);
-
-
 
     });
 
